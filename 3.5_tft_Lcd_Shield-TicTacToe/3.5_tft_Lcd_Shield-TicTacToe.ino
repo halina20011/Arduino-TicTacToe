@@ -2,7 +2,7 @@
  * This project was produced by Halina
  * 
  *  github: https://github.com/halina20011/Arduino-TicTacToe/
- *  YouTube: https://www.youtube.com/channel/UCG0h6r6T1joRASO29JV9qMQ
+ *  YouTube: https://www.youtube.com/watch?v=QE2UWFv8szw&t
  *  
  *  Install Libraries From: Adafruit_GFX.h    - https://github.com/adafruit/Adafruit-GFX-Library
  *                          Adafruit_TFTLCD.h - https://github.com/adafruit/TFTLCD-Library

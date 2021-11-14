@@ -1,10 +1,10 @@
 # Arduino-TicTacToe
 
-You need to download these libraries for this to work properly: 
+You need to download these libraries for this to work properly:</br>
 
 TFTLCD-Library: https://github.com/adafruit/TFTLCD-Library </br>
-Adafruit_TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen
-Adafruit-GFX-Library: https://github.com/adafruit/Adafruit-GFX-Library
+Adafruit_TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen </br>
+Adafruit-GFX-Library: https://github.com/adafruit/Adafruit-GFX-Library </br>
 
 ## You can find the whole instructions here
 [![You can find the whole instructions here:](https://i.ytimg.com/vi/QE2UWFv8szw/sddefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw)

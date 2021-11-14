@@ -2,7 +2,7 @@
 
 You need to download these libraries for this to work properly: 
 
-TFTLCD-Library: https://github.com/adafruit/TFTLCD-Library \n
+TFTLCD-Library: https://github.com/adafruit/TFTLCD-Library </br>
 Adafruit_TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen
 Adafruit-GFX-Library: https://github.com/adafruit/Adafruit-GFX-Library
 

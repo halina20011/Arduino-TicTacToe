@@ -53,11 +53,8 @@ int oColor = red;
 
 int infinity = 32767;
 
-
 extern uint8_t oChar[];
 extern uint8_t xChar[];
-extern uint8_t line[];
-extern uint8_t lineLeft[];
 
 String mode = "None";
 

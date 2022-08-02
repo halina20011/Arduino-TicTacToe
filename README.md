@@ -9,9 +9,6 @@
         <a href="https://halina20011.github.io/">
             <img src="https://img.shields.io/badge/Website-lightgrey?style=for-the-badge" alt="Website"/>
         </a>
-        <a href="https://www.instagram.com/mario.durakovic/">
-            <img src="https://img.shields.io/badge/Instagram-blue?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
-        </a>
     </div>
 </div>
 

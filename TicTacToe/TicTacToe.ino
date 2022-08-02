@@ -99,6 +99,7 @@ void setup(){
     // Print text
     tft.setTextColor(blue);
     drawCentreString("Tic-tac-toe", 160, 0, 320, 320);
+    tft.setTextColor(black);
 
     // Wait to mode to be selected
     selectMode();

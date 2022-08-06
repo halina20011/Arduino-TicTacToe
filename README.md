@@ -12,11 +12,12 @@
     </div>
 </div>
 
+## Required libraries
 To successfully compile code, you will need to download these libraries:</br>
 
-TFTLCD-Library: https://github.com/adafruit/TFTLCD-Library </br>
-Adafruit_TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen </br>
-Adafruit-GFX-Library: https://github.com/adafruit/Adafruit-GFX-Library </br>
+- TFTLCD Library: https://github.com/adafruit/TFTLCD-Library
+- GFX Library: https://github.com/adafruit/Adafruit-GFX-Library
+- TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen
 
 ## You can find the whole instructions here
 [![You can find the whole instructions here:](https://i.ytimg.com/vi/QE2UWFv8szw/sddefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw)

@@ -1,4 +1,4 @@
-# Arduino-TicTacToe
+# Arduino Tic-Tac-Toe
 
 <div id="header" align="center">
     <img src="https://github.com/halina20011/halina20011/blob/main/Halina-Circle.png" width="100"/>
@@ -12,7 +12,7 @@
     </div>
 </div>
 
-You need to download these libraries for this to work properly:</br>
+To successfully compile code, you will need to download these libraries:</br>
 
 TFTLCD-Library: https://github.com/adafruit/TFTLCD-Library </br>
 Adafruit_TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen </br>
@@ -22,4 +22,5 @@ Adafruit-GFX-Library: https://github.com/adafruit/Adafruit-GFX-Library </br>
 [![You can find the whole instructions here:](https://i.ytimg.com/vi/QE2UWFv8szw/sddefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw)
 
 This project is made for this display:
-<div style="text-align:center"><img src="https://user-images.githubusercontent.com/65724763/117194851-e1f4d600-ade4-11eb-91d6-5033e6830c19.jpg" width="403" height="272.4" />
+
+<div style="text-align:center"><img src="/Images/image.jpg" width="403" height="272.4" />

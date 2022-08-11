@@ -102,8 +102,8 @@ void setup(){
     selectMode();
 
     drawInfoArea();
-    drawGameField();
     drawGameArea();
+    drawGameField();
 
     printTurn();
 }

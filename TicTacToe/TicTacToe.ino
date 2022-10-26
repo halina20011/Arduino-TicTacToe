@@ -16,7 +16,7 @@
 #include "Fonts/FreeSans9pt7b.h"
 #include "colors.h"
 
-//Defines setti2gs
+//Defines settings
 #define LCD_CS A3
 #define LCD_CD A2
 #define LCD_WR A1
@@ -78,9 +78,9 @@ void(* resetFunc) (void) = 0;
 void setup(){
     Serial.begin(115200);
 
-    //Reset display
+    // Reset display
     tft.reset(); 
-    //If your display does not work, change the address to 0x9325 or 0x9328 or 0x7575 or 0x9341, 0x8357
+    // If your display does not work, change the address to 0x9325 or 0x9328 or 0x7575 or 0x9341, 0x8357
     tft.begin(0x9341); 
     tft.setRotation(3);
     tft.setTextWrap(false);
@@ -95,7 +95,7 @@ void setup(){
 
     // Print text
     tft.setTextColor(blue);
-    drawCentreString("Tic-tac-toe", 160, 0, 320, 320);
+    drawCentreString("Tic Tac Toe", 160, 0, 320, 320);
     tft.setTextColor(black);
 
     // Wait to mode to be selected
@@ -114,7 +114,7 @@ void loop(){
     pinMode(XM, OUTPUT);
     pinMode(YP, OUTPUT);
 
-    if(p.z > ts.pressureThreshhold) {
+    if(p.z > ts.pressureThreshhold){
         int y = map(p.x, TS_MAXX, TS_MINX, 0, 320);
         int x = map(p.y, TS_MAXY, TS_MINY, 0, 480);
 
@@ -140,9 +140,9 @@ void loop(){
 }
 
 void selectMode(){
-    tft.fillRoundRect(10,  10, 140, 50, 8, red);     //Solo "button"
-    tft.fillRoundRect(10,  70, 140, 50, 8, blue);    //Duo  "button"
-    tft.fillRoundRect(10, 260, 140, 50, 5, lime);  //Help "button"
+    tft.fillRoundRect(10,  10, 140, 50, 8, red);    //Solo "button"
+    tft.fillRoundRect(10,  70, 140, 50, 8, blue);   //Duo  "button"
+    tft.fillRoundRect(10, 260, 140, 50, 5, lime);   //Help "button"
 
     drawCentreString("Solo", 10,  10, 140, 50);
     drawCentreString("Duo",  10,  70, 140, 50);
@@ -153,18 +153,18 @@ void selectMode(){
 
         pinMode(XM, OUTPUT);
         pinMode(YP, OUTPUT);
-        if (p.z > ts.pressureThreshhold) {
+        if(p.z > ts.pressureThreshhold){
             int y = map(p.x, TS_MAXX, TS_MINX, 0, 320);
             int x = map(p.y, TS_MAXY, TS_MINY, 0, 480);
             
             Serial.println("x: " + String(x) + " y: " + String(y));
-            if (10 < x && x < 150 && 10 < y  && y < 60) {
+            if(10 < x && x < 150 && 10 < y  && y < 60){
                 mode = "Solo";
             }
-            else if (10 < x && x < 150 && 70 < y  && y < 120) {
+            else if(10 < x && x < 150 && 70 < y  && y < 120){
                 mode = "Duo";
             } 
-            else if (10 < x && x < 150 && 260 < y && y < 310) {
+            else if(10 < x && x < 150 && 260 < y && y < 310){
                 help();
             } 
         }
@@ -174,7 +174,7 @@ void selectMode(){
 
 // Show help menu
 void help(){
-    typedef struct text {
+    typedef struct text{
         int textSize;
         String message;
     };
@@ -224,7 +224,7 @@ void help(){
 
         pinMode(XM, OUTPUT);
         pinMode(YP, OUTPUT);
-        if (p.z > ts.pressureThreshhold) {
+        if(p.z > ts.pressureThreshhold){
             int y = map(p.x, TS_MAXX, TS_MINX, 0, 320);
             int x = map(p.y, TS_MAXY, TS_MINY, 0, 480);
 
@@ -294,9 +294,9 @@ void printAiMoves(String message, int messageIndex){
 }
 
 // Functions for the game logic
-void move(int x, int y) {
+void move(int x, int y){
     Serial.println("Move X: " + String(x) + " Y: " + String(y) + " ");
-    if(board[y][x] != ' ') {
+    if(board[y][x] != ' '){
         return;
     }
 
@@ -318,8 +318,8 @@ void move(int x, int y) {
     }
 }
 
-void changePlayer() {
-    if (currentPlayer == 'x') {
+void changePlayer(){
+    if(currentPlayer == 'x'){
         currentPlayer = 'o';
     }
     else {
@@ -327,37 +327,37 @@ void changePlayer() {
     }
 }
 
-String getGameStatus() {
+String getGameStatus(){
     String winner = "";
-    for (int i = 0; i < 3; i++) {
-        if (isEquals(board[i][0], board[i][1], board[i][2]) == true) {
+    for(int i = 0; i < 3; i++){
+        if(isEquals(board[i][0], board[i][1], board[i][2]) == true){
             winner = String(board[i][0]);
         }
     }
 
-    for (int i = 0; i < 3; i++) {
-        if (isEquals(board[0][i], board[1][i], board[2][i]) == true) {
+    for(int i = 0; i < 3; i++){
+        if(isEquals(board[0][i], board[1][i], board[2][i]) == true){
             winner = String(board[0][i]);
         }
     }
 
-    if (isEquals(board[0][0], board[1][1], board[2][2]) == true) {
+    if(isEquals(board[0][0], board[1][1], board[2][2]) == true){
         winner = String(board[0][0]);
     }
-    if (isEquals(board[2][0], board[1][1], board[0][2]) == true) {
+    if(isEquals(board[2][0], board[1][1], board[0][2]) == true){
         winner = String(board[2][0]);
     }
 
     int freeSpots = 0;
-    for (int y = 0; y < 3; y++) {
-        for (int x = 0; x < 3; x++) {
-            if (board[y][x] == ' ') {
+    for(int y = 0; y < 3; y++){
+        for(int x = 0; x < 3; x++){
+            if(board[y][x] == ' '){
                 freeSpots++;
             }
         }
     }
 
-    if (winner == "" && freeSpots == 0) {
+    if(winner == "" && freeSpots == 0){
         return "tie";
     }
     else {
@@ -386,31 +386,31 @@ void showWinner(String result){
     int x = xOffset + padding + charArea / 2;
     int y = padding + charArea / 2 - height;
 
-    for (int i = 0; i < 3; i++) {
-        if (isEquals(board[i][0], board[i][1], board[i][2]) == true) {
+    for(int i = 0; i < 3; i++){
+        if(isEquals(board[i][0], board[i][1], board[i][2]) == true){
             y += i * nextPos;
             plotLineWidth(x, y, x + charArea * 2, y, height, white);
         }
     }
 
-    for (int i = 0; i < 3; i++) {
-        if (isEquals(board[0][i], board[1][i], board[2][i]) == true) {
+    for(int i = 0; i < 3; i++){
+        if(isEquals(board[0][i], board[1][i], board[2][i]) == true){
             x += i * nextPos;
             plotLineWidth(x, y, x, y + charArea * 2, height, white);
         }
     }
 
-    if (isEquals(board[0][0], board[1][1], board[2][2]) == true) {
+    if(isEquals(board[0][0], board[1][1], board[2][2]) == true){
         plotLineWidth(x, y, x + charArea * 2, y + charArea * 2, height, white);
     }
 
-    if (isEquals(board[2][0], board[1][1], board[0][2]) == true) {
+    if(isEquals(board[2][0], board[1][1], board[0][2]) == true){
         plotLineWidth(x, y + charArea * 2, x + charArea * 2, y, height, white);
     }
 }
 
-bool isEquals(char a, char b, char c) {
-    if (a == b && b == c && a != ' ') {
+bool isEquals(char a, char b, char c){
+    if(a == b && b == c && a != ' '){
         return true;
     }
     return false;
@@ -429,9 +429,9 @@ int getScore(String resurlt, char Player){
 
 void printBoard(char Board[3][3]){
     Serial.print("[");
-    for (int y = 0; y < 3; y++) {
+    for(int y = 0; y < 3; y++){
         Serial.print("[");
-        for (int x = 0; x < 3; x++) {
+        for(int x = 0; x < 3; x++){
             Serial.print(String(Board[y][x]));
             Serial.print(" ");
         }
@@ -442,9 +442,9 @@ void printBoard(char Board[3][3]){
     return;
 }
 
-int getBestMove(char Board[3][3], boolean isCalculatedPlayer, char calculatedPlayer, char oponent, int maxDepth) {
+int getBestMove(char Board[3][3], boolean isCalculatedPlayer, char calculatedPlayer, char oponent, int maxDepth){
     String resurlt = getGameStatus();
-    if (resurlt != "") {
+    if(resurlt != ""){
         return getScore(resurlt, calculatedPlayer) * maxDepth;
     }
     allCalculatedMoves++;
@@ -456,14 +456,14 @@ int getBestMove(char Board[3][3], boolean isCalculatedPlayer, char calculatedPla
         bestScore = infinity;
     }
 
-    // This function will print all possible combinations, but when you 
+    // 'printBoard' function will print all possible combinations, but when you 
     // enable it it will significantly slow down the code.
     // Could be fixed by increasing the baud rate of serial communication.
     // printBoard(Board);
 
-    for (int y = 0; y < 3; y++) {
-        for (int x = 0; x < 3; x++) {
-            if (board[y][x] == ' ') {
+    for(int y = 0; y < 3; y++){
+        for(int x = 0; x < 3; x++){
+            if(board[y][x] == ' '){
                 if(isCalculatedPlayer == true){
                     board[y][x] = calculatedPlayer;
                 }
@@ -482,21 +482,20 @@ int getBestMove(char Board[3][3], boolean isCalculatedPlayer, char calculatedPla
             }
         }
     }
-
     return bestScore;
 }
 
-void moveAi() {
+void moveAi(){
     int bestScore = -infinity;
     int bestMove[2] = {0, 0};
     printAiMoves("Calculating...", messageIndex);
-    for (int y = 0; y < 3; y++) {
-        for (int x = 0; x < 3; x++) {
-            if (board[y][x] == ' ') {
+    for(int y = 0; y < 3; y++){
+        for(int x = 0; x < 3; x++){
+            if(board[y][x] == ' '){
                 board[y][x] = ai;
                 int score = getBestMove(board, false, ai, human, 10);
                 board[y][x] = ' ';
-                if (score > bestScore) {
+                if(score > bestScore){
                     bestScore = score;
                     bestMove[0] = y;
                     bestMove[1] = x;
@@ -526,10 +525,10 @@ void plotLineWidth(int x0, int y0, int x1, int y1, float wd, int color){
         e2 = err; 
         x2 = x0;
         if(2*e2 >= -dx){
-            for (e2 += dy, y2 = y0; e2 < ed*wd && (y1 != y2 || dx > dy); e2 += dx){
+            for(e2 += dy, y2 = y0; e2 < ed*wd && (y1 != y2 || dx > dy); e2 += dx){
                 tft.drawPixel(x0, y2 += sy, color);
             }
-            if (x0 == x1){ 
+            if(x0 == x1){ 
                 break;
             }
             e2 = err; 
@@ -537,7 +536,7 @@ void plotLineWidth(int x0, int y0, int x1, int y1, float wd, int color){
             x0 += sx; 
         } 
         if(2*e2 <= dy){
-            for (e2 = dx-e2; e2 < ed*wd && (x1 != x2 || dx < dy); e2 += dy){
+            for(e2 = dx-e2; e2 < ed*wd && (x1 != x2 || dx < dy); e2 += dy){
                 tft.drawPixel(x2 += sx, y0, color);
             }
             if(y0 == y1){
@@ -548,15 +547,15 @@ void plotLineWidth(int x0, int y0, int x1, int y1, float wd, int color){
     }
 }
 
-void drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color) {
+void drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w, int16_t h, uint16_t color){
     int16_t i, j, byteWidth = (w + 7) / 8;
     uint8_t byte;
 
-    for (j = 0; j < h; j++) {
-        for (i = 0; i < w; i++) {
-            if (i & 7) byte <<= 1;
+    for(j = 0; j < h; j++){
+        for(i = 0; i < w; i++){
+            if(i & 7) byte <<= 1;
             else      byte   = pgm_read_byte(bitmap + j * byteWidth + i / 8);
-            if (byte & 0x80) tft.drawPixel(x + i, y + j, color);
+            if(byte & 0x80) tft.drawPixel(x + i, y + j, color);
         }
     }
 }

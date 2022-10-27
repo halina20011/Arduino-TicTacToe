@@ -7,6 +7,21 @@ To successfully compile code, you will need to download these libraries:</br>
 - GFX Library: https://github.com/adafruit/Adafruit-GFX-Library
 - TouchScreen: https://github.com/adafruit/Adafruit_TouchScreen
 
+## Set correct size this display
+Adafruit TFT library has by default width 240 and height 320. This display has width 320 and height 480.
+To set correct sizes got to Arduino libraries folder and edit ```Adafruit_TFT/Adafruit_TFTLCD.cpp```.
+
+Find lines with
+```
+#define TFTWIDTH 240
+#define TFTHEIGHT 320
+```
+and change it to (you can also comment it and add this)
+```
+#define TFTWIDTH 320
+#define TFTHEIGHT 480
+```
+
 ## You can find the whole instructions here
 [![You can find the whole instructions here:](https://i.ytimg.com/vi/QE2UWFv8szw/sddefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw)
 

@@ -188,15 +188,15 @@ void help(){
     int cursorY = padding;
 
     text array[] = {
-        {1, "There are to mods from which you"},
+        {1, "There are two mods from which you"},
         {1, "can sellect one."},
         {1, ""},
         {2, "Solo"},
         {1, ""},
         {1, "Mode where you play against Ai."},
         {1, "First move will be slow,"},
-        {1, "because it need to calculate more"},
-        {1, "than ten thousands of moves."},
+        {1, "because it needs to calculate more"},
+        {1, "than ten thousand possible moves."},
         {1, ""},
         {2, "Duo"},
         {1, ""},

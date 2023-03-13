@@ -1,4 +1,6 @@
-# Arduino Tic-Tac-Toe
+# Arduino Tic Tac Toe
+This a little game whitch you can play on an Arduino board that has 3.5"TFT LCD Shield on it.
+There are two modses "Solo" and "Duo". In "Solo" mode you play against MinMax Algorithm (You can't beat it). In "Duo" mode you can play with somebody.
 
 Text tutorial: https://halina20011.github.io/Arduino/ArduinoTicTacToe.html
 
@@ -25,12 +27,13 @@ and change it to (you can also comment previous sizes and add this)
 ```
 
 ## You can find the whole instructions here
-[![You can find the whole instructions here:](https://img.youtube.com/vi/QE2UWFv8szw/maxresdefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw)
+[![You can find the whole instructions here:](https://img.youtube.com/vi/QE2UWFv8szw/maxresdefault.jpg)](https://www.youtube.com/watch?v=QE2UWFv8szw) </br>
 
-</br>
+## Updated version of video
+[![Updated version:](https://img.youtube.com/vi/uN5qn51rdnU/maxresdefault.jpg)](https://youtu.be/uN5qn51rdnU) </br>
 
 ## Images:
 <div style="text-align:center">
-    <img src="https://halina20011.github.io/Images/arduinoTicTacToeImage1.jpg"/>
+    <img src="https://halina20011.github.io/Images/ContentImages/arduinoTicTacToeImage1.jpg"/>
     <img src="/Images/image.jpg"/><div>
 </div>

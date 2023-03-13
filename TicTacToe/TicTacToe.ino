@@ -1,8 +1,8 @@
 /*#################################################################################
    This project was produced by Halina
 
-    github: https://github.com/halina20011/Arduino-TicTacToe/
-    YouTube: https://www.youtube.com/channel/UCG0h6r6T1joRASO29JV9qMQ
+    GitHub: https://github.com/halina20011/Arduino-TicTacToe/
+    YouTube https://www.youtube.com/channel/UCG0h6r6T1joRASO29JV9qMQ
 
     Install Libraries From: Adafruit_GFX.h    - https://github.com/adafruit/Adafruit-GFX-Library
                             Adafruit_TFTLCD.h - https://github.com/adafruit/TFTLCD-Library
@@ -13,10 +13,12 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_TFTLCD.h>
 #include <TouchScreen.h>
+
 #include "Fonts/FreeSans9pt7b.h"
+
 #include "colors.h"
 
-//Defines settings
+// Define settings
 #define LCD_CS A3
 #define LCD_CD A2
 #define LCD_WR A1

@@ -2,7 +2,7 @@
 This a little game whitch you can play on an Arduino board that has 3.5"TFT LCD Shield on it.
 There are two modses "Solo" and "Duo". In "Solo" mode you play against MinMax Algorithm (You can't beat it). In "Duo" mode you can play with somebody.
 
-Text tutorial: https://halina20011.github.io/Arduino/ArduinoTicTacToe.html
+Text tutorial: https://halina20011.github.io/Arduino/arduinoTicTacToe.html
 
 ## Required libraries
 To successfully compile code, you will need to download these libraries:</br>
